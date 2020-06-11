@@ -1,11 +1,18 @@
-$('#flashMessage')
-    .hide()
-    .slideDown(1000)
-    .delay(3000)
-    .slideUp();
 
-const title = "My First Blog Post";
-const content = "This is my <strong>first</strong> post!";
+// const title = "My First Blog Post";
+// const content = "This is my <strong>first</strong> post!";
+// 
+$('#flashMessage').hide()
+$('#previewButton').click(function(){
+    const title = $('#blogTitleInput').val();
+    const content = $('#blogContentInput').val();
 
-$('#blogTitlePreview').text(title);
-$('#blogContentPreview').html(content);
+    $('#blogTitlePreview').text(title);
+    $('#blogContentPreview').html(content);
+
+    $('#flashMessage')
+        .hide()
+        .slideDown(1000)
+        .delay(3000)
+        .slideUp();
+});
